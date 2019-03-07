@@ -2,12 +2,14 @@ package com.eShoppingCart.dao.implementation;
 
 import java.util.List;
 
+import org.hibernate.Query;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.eShoppingCart.dao.ProductDao;
+import com.eShoppingCart.model.Customer;
 import com.eShoppingCart.model.Product;
 
 @Repository
@@ -51,5 +53,6 @@ public class ProductDaoImpl implements ProductDao{
 		query.setString(0, productName);
 		return (Product) query.uniqueResult(); 
 	}
+ 
 	
 }
