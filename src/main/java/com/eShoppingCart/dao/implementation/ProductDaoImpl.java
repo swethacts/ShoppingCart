@@ -46,5 +46,10 @@ public class ProductDaoImpl implements ProductDao{
 		
 	}
 
+	public Product getProductByName(String productName) { 
+		Query query = sessionFactory.getCurrentSession().createQuery("from Product where name = ?");
+		query.setString(0, productName);
+		return (Product) query.uniqueResult();
+	}
 	
 }
