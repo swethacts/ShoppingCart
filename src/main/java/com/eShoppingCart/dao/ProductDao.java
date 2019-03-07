@@ -18,4 +18,6 @@ public interface ProductDao {
     void addProduct(Product product);
     
     void editProduct(Product product);
+	
+    Product getProductByName(String productName);
 }
