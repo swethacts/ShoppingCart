@@ -64,7 +64,7 @@ public class ShoppingCartTest {
 	@Test
 	public void testProductByID() {
 		Product prod = productService.getProductById(33);
-		assertEquals("Violin", prod.getName()); 
+		assertEquals("Guitar", prod.getName()); 
 	}
 	
 	@Test
